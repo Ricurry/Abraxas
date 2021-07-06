@@ -118,7 +118,7 @@ With that, you should get a somewhat clear idea of what the functions are for.
 
 ### Liscense 
 
-
+[GNU General Public Liscensing.](https://github.com/poet5/Abraxas/blob/main/LICENSE)
 
 ### Contribution.
 
