@@ -1,10 +1,11 @@
-![TItle](https://user-images.githubusercontent.com/78241083/124602392-689e5180-de2e-11eb-8c18-4ec0c64826a1.PNG)
+## Abraxis.
 
+### Just a little experiment I've been working on, including making a custom checksum, and my own protocol!
 
-Just a little experiment I've set up, to try and fail and making my own proper checksum.
+It's a work in progress, of course. But, I have gotten steady progress, and due to work on previous projects, I can import some libraries from them to cut down costs of time.
 
-It's developed only in Linux at the moment, but I can try and roll out releases for Windows.
+The main solution for my checksum is coded in C++, and the verification process is multithreaded.
 
+There are also various other treaty features, such as multithread message compression and peer verifying.
 
-
-### Nothing is coming so far, updates on this project will be slow, but you are able to see them!
+Most of it is written in mind for Linux systems, so Windows users, wait abit before I can create a solution for you bunch!
