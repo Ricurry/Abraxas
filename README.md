@@ -118,12 +118,6 @@ Compresses a packet message.
 
 
 
-With that, you should get a somewhat clear idea of what the functions are for.
-
-Note the compression, and checksum functions are entirely multithreading.
-
-
-
 ## Liscense 
 
 [GNU Public Liscense](https://github.com/poet5/Abraxas/blob/main/LICENSE)
