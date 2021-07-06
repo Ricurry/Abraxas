@@ -34,7 +34,7 @@ In your main cplusplus file, write this:
 
 - Save and close.
 
-now you are ready.
+Now, you are ready.
 
 ## Functions.
 
