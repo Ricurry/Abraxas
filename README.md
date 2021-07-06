@@ -1,72 +1,136 @@
-## Abraxas.
+# Abraxus.
 
-A free-to-use self-checksum library, written in C/C++.
+#### Self Checksum and IP Header Library! Written in C/C++ for the Linux SubSystem.
 
-This is for Linux systems, so Windows users, your out of luck, I'm not making a new one!
+*NOTE:* *this is in beta stage right now, so wait patiently for more functions!*
 
-### Usage.
+Before you continue this, I reccomend if you have not, brush up on C++ Sockets and Iphdr structure,
 
-To use Abraxas, just download the Resource Files here, plop 'em into your repository.
+for starters, I'd reccomend Beej's Guide.
 
-From there you would include your code with something like:
+https://beej.us/guide/bgnet/
 
-`#include "Resource Files/iphdr"`
+There are many versions, depending on where you live.
 
-and that'll include all of the libraries you need.
+#### Documentation:
 
-### Features.
+- Functions
+  - IP Headers.
+    - `htonData()`
+  - Checksums.
+    - `tcp_checksum()`
+  - Message Based.
+    - `encode()`
 
-Abraxas includes things like multithreaded compression for messages, peer-to-peer verification,
+### Include Path.
 
-self-checksums, all provided in the library.
+To include the iphdr directory, download as ZIP, extract the Resource Files folder, and put it in your directory.
 
-For these we will split them into 3 categories,
+In your main cplusplus file, write this:
 
-- IP Header Functions, or functions dealing with the packet.
-- Message Functions, or functions handling messages sent and received.
-- And Filler Functions, that fill the information for your Ip-header to be used.
+``` c++
+#include "Resource Files/iphdr"
+```
+
+- Save and close.
+
+now you are ready.
+
+### Functions.
+
+Functions will be divided into 3 categories, for documentation purpose;
+
+- IP Headers.
+- Checksums.
+- And Message Based.
+
+These are all in order from greatest priority to least.
+
+Let's start with IP Header Functions.
+
+*NOTE: There are not many functions as this is in beta, but consider contributing to the repository, DM me on my Discord, you can check it out on my front page.*
+
+### IP Headers.
+
+  ``` c++
+void HtonData(iphdr* h, char buffer[8]);
+  ```
 
 
 
-We will start with filler functions, and then IP header functions, and message functions last, ranking from most priority to least.
+Convert Buffer Address to network short.
+
+`iphdr * h`
+
+##### The IP Header containing front packet information.
+
+`char buffer[8]`
+
+the buffer pointing to the network short address.
+
+### Checksums.
+
+```c++
+int tcp_checksum(iphdr * Iph, char * src, int sck);
+```
+
+Verifies message using Fletchers_32bit Checksum.
+
+Multithreading using Posix Threads.
 
 
 
-Before we begin though, I will consider you fluent with the basics of packet structure, and decent at creating socket applications in C++. So bear this in mind.
+`iphdr * Iph`
 
-### Filler Functions.
+The IP Header containing front packet information.
 
-`h_data::HtonData(iphdr* h, char buffer[8]);`
+`char * src`
 
-Where `h` is the header needed to retrieve information, and `buffer[8]` is the containing variable for the information you want to send.
+The buffer containing packet message.
+
+`int sck`
+
+the Socket tied to that message.
 
 
 
-This function is used for filling out the message data and formatting it into something the peer can understand, if you just send a message without any purpose or identification, the peer host will then drop the connection, since there is no proper way to verify it.
+### Message Based.
 
-That's way although initial connections may work between socket-to-socket, nothing will actually happen unless there is a proper  way to verify the messages you are sending.
+```c++
+char * encode (char * str);
+```
 
-There isn't really much going on for filler functions, HtonData in particular just converts your message attached to your socket, into a network short, more suited for sending a message.
+Compresses a packet message.
 
-### IP Header Functions.
+Multithreaded, Posix Threading Solution.
 
-Here is one that'll do you a lot of justice, it's a self serving checksum. It's multithreading, and it is able to verify messages sent and received, depending on how you call loopbacks `send` and `recv()`.
 
-The usage goes like this:
 
-`tcp_checksum(iphdr* Iph, char * src, int sck)`
+`char * str`
 
-`Iph`
+String to encode.
 
-The primary Ip header.
 
-`src`
 
-The message being sent or received.
+With that, you should get a somewhat clear idea of what the functions are for.
 
-`sck`
 
-The socket attaching the message.
+
+### Liscense 
+
+
+
+### Contribution.
+
+Contact me on Discord, those who want to contribute.
+
+I'll need people fluent with C++, and basic knowledge with commands like `nmap` and `curl`.
+
+You can check out my socials [here.](https://github.com/poet5)
+
+
+
+
 
 
 
