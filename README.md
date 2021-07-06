@@ -1,6 +1,6 @@
 ## Abraxis.
 
-### Just a little experiment I've been working on, including making a custom checksum, and my own protocol!
+### Custom Checksum and Custom Protocols!
 
 It's a work in progress, of course. But, I have gotten steady progress, and due to work on previous projects, I can import some libraries from them to cut down costs of time.
 
