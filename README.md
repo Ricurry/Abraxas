@@ -64,13 +64,13 @@ Convert Buffer Address to network short.
 iphdr * h
 ```
 
-The IP Header containing front packet information.
+#####The IP Header containing front packet information.
 
 ``` C++
 char buffer[8]
 ```
 
-the buffer pointing to the network short address.
+#####the buffer pointing to the network short address.
 
 ### Checksums.
 
@@ -86,19 +86,19 @@ Verifies message using Fletchers_32bit Checksum.
 iphdr * Iph
 ```
 
-The IP Header containing front packet information.
+#####The IP Header containing front packet information.
 
 ```c++
 char * src
 ```
 
-The buffer containing packet message.
+#####The buffer containing packet message.
 
 ``` C++
 int sck
 ```
 
-the Socket tied to that message.
+#####the Socket tied to that message.
 
 
 
@@ -114,7 +114,7 @@ Compresses a packet message.
 
 `char * str`
 
-String to encode.
+#####String to encode.
 
 
 
