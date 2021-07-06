@@ -111,8 +111,9 @@ char * encode (char * str);
 Compresses a packet message.
 
 
-
-`char * str`
+```c++
+char * str
+```
 
 #### String to encode.
 
