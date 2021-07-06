@@ -98,7 +98,7 @@ char * src
 int sck
 ```
 
-#####the Socket tied to that message.
+#### The Socket tied to that message.
 
 
 
@@ -114,7 +114,7 @@ Compresses a packet message.
 
 `char * str`
 
-#####String to encode.
+#### String to encode.
 
 
 
