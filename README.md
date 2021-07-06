@@ -12,7 +12,7 @@ https://beej.us/guide/bgnet/
 
 There are many versions, depending on where you live.
 
-#### Documentation:
+## Documentation:
 
 - Functions
   - IP Headers.
@@ -22,7 +22,7 @@ There are many versions, depending on where you live.
   - Message Based.
     - `encode()`
 
-### Include Path.
+## Include Path.
 
 To include the iphdr directory, download as ZIP, extract the Resource Files folder, and put it in your directory.
 
@@ -36,7 +36,7 @@ In your main cplusplus file, write this:
 
 now you are ready.
 
-### Functions.
+## Functions.
 
 Functions will be divided into 3 categories, for documentation purpose;
 
@@ -50,7 +50,7 @@ Let's start with IP Header Functions.
 
 *NOTE: There are not many functions as this is in beta, but consider contributing to the repository, DM me on my Discord, you can check it out on my front page.*
 
-### IP Headers.
+## IP Headers.
 
   ``` c++
 void HtonData(iphdr* h, char buffer[8]);
@@ -60,11 +60,15 @@ void HtonData(iphdr* h, char buffer[8]);
 
 Convert Buffer Address to network short.
 
-`iphdr * h`
+```C++
+iphdr * h
+```
 
-##### The IP Header containing front packet information.
+The IP Header containing front packet information.
 
-`char buffer[8]`
+``` C++
+char buffer[8]
+```
 
 the buffer pointing to the network short address.
 
@@ -76,19 +80,23 @@ int tcp_checksum(iphdr * Iph, char * src, int sck);
 
 Verifies message using Fletchers_32bit Checksum.
 
-Multithreading using Posix Threads.
 
 
-
-`iphdr * Iph`
+``` C++
+iphdr * Iph
+```
 
 The IP Header containing front packet information.
 
-`char * src`
+```c++
+char * src
+```
 
 The buffer containing packet message.
 
-`int sck`
+``` C++
+int sck
+```
 
 the Socket tied to that message.
 
@@ -102,8 +110,6 @@ char * encode (char * str);
 
 Compresses a packet message.
 
-Multithreaded, Posix Threading Solution.
-
 
 
 `char * str`
@@ -114,22 +120,21 @@ String to encode.
 
 With that, you should get a somewhat clear idea of what the functions are for.
 
+Note the compression, and checksum functions are entirely multithreading.
 
 
-### Liscense 
 
-[GNU General Public Liscensing.](https://github.com/poet5/Abraxas/blob/main/LICENSE)
+## Liscense 
 
-### Contribution.
+[GNU Public Liscense](https://github.com/poet5/Abraxas/blob/main/LICENSE)
+
+## Contribution.
 
 Contact me on Discord, those who want to contribute.
 
 I'll need people fluent with C++, and basic knowledge with commands like `nmap` and `curl`.
 
 You can check out my socials [here.](https://github.com/poet5)
-
-
-
 
 
 
