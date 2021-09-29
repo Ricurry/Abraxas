@@ -1,0 +1,24 @@
+Proxy TODO:
+
+- Create signal handler for proxy.
+   - Create socket.
+      - One for remote connection and one for server connection
+          - Bind server connection socket. and connect to remote socket. (In this case our raspberry pi)
+              - Make user local ip (Connection Socket) and connect local ip to external host.
+   - Read for message from client server
+      - If there is a message, put it into buffer.
+      - Create variable for the size of the message.
+       if socket cannot get message. close socket.
+    - Send message read from client server to raspberry pi.\
+        - Create a buffer containing the size of the message.
+              - bind another socket writing the data.
+
+    - Set a enumeration value of the maximum data being sent to and from client server.
+     - set to 8192.
+       - set buffers for both the amount of data being received and sent from client.
+
+    - Create an acceptor function
+       - Accept socket from client server.
+    
+    - Create handler function.
+       - Connect to accept socket.
