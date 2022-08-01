@@ -1,6 +1,6 @@
 # Abraxus.
 
-## This was transferred by my alternate account.
+## This was transferred by my alternate account. Only for Linux!
 
 #### Self Checksum and IP Header Library! Written in C/C++ for the Linux SubSystem.
 
